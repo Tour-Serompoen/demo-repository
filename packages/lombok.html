@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main css/lombok.css">
+    <link rel="stylesheet" href="../template/navbar.css">
+    <link rel="stylesheet" href="../template/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet"> <!-- cursive -->
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> <!-- Holtwood -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Paket</title>
+    <style>
+        /* kept minimal — popup styles moved to main css/package.css */
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+<nav>
+		<div class="nav-logo">
+			<img src="/img/LogoKecil_Serompoen Groub.png" alt="logo">
+		</div>
+		<div class="navigation">
+			<ul class="nav-links">
+				<li><a href="/home.html" class="n1">Home</a></li>
+				<li><a href="/home.html#why" class="n1">About us</a></li>
+				<li class="dropdown">
+					<a class="n1">Paket Tour Favorit</a>
+					<ul class="dropdown-menu">
+						<li class="sub-dropdown">
+							<a href="/balipackages.html" class="sub-btn">Paket Tour Bali</a>
+							<ul class="sub-menu">
+								<li><a href="/balipackage.html">Paket 3 Hari 2 Malam</a></li>
+								<li><a href="/balipackage2.html">Paket 4 Hari 3 Malam</a></li>
+								<li><a href="/balipackage3.html">Paket 5 Hari 4 Malam</a></li>
+								<li><a href="/balipackage4.html">Paket 6 Hari 5 Malam</a></li>
+							</ul>
+						</li>
+						<li class="sub-dropdown"><a href="/packages/jogja.html" class="sub-btn">Paket Tour Jogja</a></li>
+						<li class="sub-dropdown"><a href="/packages/lombok.html" class="sub-btn">Paket Tour Lombok</a></li>
+						<li class="sub-dropdown"><a href="/packages/malang_batu.html" class="sub-btn">Paket Tour Malang Batu</a></li>
+                        <li><a href="/packages/malang_batu_bromo.html">Paket Malang, Batu & Bromo</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="https://wa.me/6281258866798" target="_blank" rel="noopener noreferrer" class="n1">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
+    <!-- end navbar -->
+
+    <!-- packages -->
+    <div class="tour-section">
+    <h2 class="title oleo-script-regular">Paket Tour Terbaru Lombok Top Holiday</h2>
+    <div class="tour-grid">       
+    </div>
+    <div class="tngh">
+        <div class="tour-card" >
+            <div class="label">
+                <span class="promo">PAKET WISATA LOMBOK 5 HARI 4 MALAM</span>
+                <span class="code">PACKAGE 1</span>
+            </div>
+            <img src="../img/Data/LOMBOK/pexels-oidonnyboy-7652351.jpg" class="tour-img">
+            <p style="color: rgb(0, 9, 17); font-size: 10px;">Lisensi: Pexels License</p>
+
+            <div class="info">
+                <h3>LOMBOK 1</h3>
+                <p class="price"><small>*Mulai</small> <b>Rp 1.850.000</b> / pax</p>
+            </div>
+            <div class="tap"><button><h3>Tap Here</h3></button></div>
+        </div>
+        </div>
+</div>
+
+    <!-- end packages -->
+     <div class="sor">
+     <p style="color: rgb(255, 255, 255); font-size: 10px;">Lisensi: Pexels License</p>
+     </div>
+
+    <!-- footer -->
+    <footer id="footer" class="footer">
+        <div class="quote"><h2 class="cedarville-cursive-regular">Liburan Asik, Anti Ribet, Serompoen yang Urus!</h2></div>
+        <div class="footer-row">
+            <div class="footer-columm">
+                <h3>Visit our profile</h3>
+                <ul>
+                    <li><i class="fa-brands fa-square-instagram"></i> @serompoen.tour</li>
+                    <li><i class="fa-brands fa-tiktok"></i> @serompoen.tour</li>
+                </ul>
+            </div>
+            <div class="footer-columm">
+                <ul>
+                    <li><a><i class="fa-solid fa-location-dot"></i> Lokasi umkm</a></li>
+                    <li><i class="fa-solid fa-phone"></i> 0000 0000</li>
+                    <li><i class="fa-brands fa-whatsapp"></i> +62 8125-8866-798</li>
+                    <li><i class="fa-solid fa-envelope"></i> serompoen@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            <h3 id="popupTitle"></h3>
+            <p id="popupDetail"></p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for popup functionality (updated to provide full HTML for each package)
+        const popup = document.getElementById('popup');
+        const closePopup = document.getElementById('closePopup');
+        const popupTitleEl = document.getElementById('popupTitle');
+        const popupDetailEl = document.getElementById('popupDetail');
+
+        // Data: HTML content for each package (BALI 1 implemented)
+        const packageDetails = {
+"LOMBOK 1": {
+  title: "LOMBOK 1 — 5 Days / 4 Nights",
+  html: `
+  <div class="popup-inner">
+    <div class="price-and-include">
+      <div class="price-list">
+
+        <h4>HARGA PER ORANG</h4>
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>Jumlah Peserta</th>
+              <th>Tanpa Hotel</th>
+              <th>Hotel ★ 2</th>
+              <th>Hotel ★ 3</th>
+              <th>Hotel ★ 4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>2</td><td>Rp 3.900.000</td><td>Rp 4.700.000</td><td>Rp 4.900.000</td><td>Rp 5.300.000</td></tr>
+            <tr><td>3</td><td>Rp 3.250.000</td><td>Rp 4.050.000</td><td>Rp 4.250.000</td><td>Rp 4.650.000</td></tr>
+            <tr><td>4</td><td>Rp 2.700.000</td><td>Rp 3.500.000</td><td>Rp 3.700.000</td><td>Rp 4.100.000</td></tr>
+            <tr><td>5</td><td>Rp 2.500.000</td><td>Rp 3.300.000</td><td>Rp 3.500.000</td><td>Rp 3.900.000</td></tr>
+            <tr><td>6 - 8</td><td>Rp 2.350.000</td><td>Rp 3.150.000</td><td>Rp 3.350.000</td><td>Rp 3.750.000</td></tr>
+            <tr><td>9 - 11</td><td>Rp 2.250.000</td><td>Rp 3.050.000</td><td>Rp 3.250.000</td><td>Rp 3.650.000</td></tr>
+            <tr><td>12 - 15</td><td>Rp 1.850.000</td><td>Rp 2.650.000</td><td>Rp 2.850.000</td><td>Rp 3.250.000</td></tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <div class="inclusions" style="margin-left:20px;">
+
+        <h4>PAKET SUDAH TERMASUK</h4>
+        <ul>
+          <li>Transportasi Selama Tour Berlangsung</li>
+          <li>Retribusi Parkir</li>
+          <li>Hotel selama 4 malam</li>
+          <li>Makan pagi 4x</li>
+          <li>Makan siang 5x</li>
+          <li>Makan malam 4x</li>
+          <li>Air Mineral</li>
+          <li>Speedboat private</li>
+          <li>Tiket Masuk Wisata</li>
+          <li>Selempang penyambutan kain tenun Lombok</li>
+          <li>Pemandu Wisata</li>
+          <li>Dokumentasi Foto</li>
+          <li>Asuransi Perjalanan Wisata</li>
+        </ul>
+
+        <h4>PAKET TIDAK TERMASUK</h4>
+        <ul>
+          <li>Tiket pesawat PP</li>
+          <li>Keperluan Pribadi di luar Fasilitas</li>
+          <li>Tipping</li>
+          <li>Sepeda keliling Gili Trawangan</li>
+          <li>Snorkling di Gili</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="itinerary">
+      <button class="itinerary-toggle" aria-expanded="false">ITINERARY</button>
+      <div class="itinerary-body">
+        <h4>ITINERARY</h4>
+        <div class="itinerary-grid">
+
+          <!-- Day 1 -->
+          <div class="day">
+            <h5>Hari Pertama</h5>
+            <ul>
+              <li>08.00 – 09.00 Penjemputan di Bandara Lombok</li>
+              <li>Klaim bagasi</li>
+              <li>Explore Desa Adat Sade & Sukarare</li>
+              <li>Explore Pantai Kuta</li>
+              <li>09.00 – 18.00 Makan siang di lokal resto</li>
+              <li>Pantai Tanjung Ann</li>
+              <li>Bukit Merese</li>
+              <li>Sirkuit Mandalika</li>
+              <li>18.00 – 20.00 Menuju local resto dan makan malam</li>
+              <li>20.00 – 20.30 Menuju hotel</li>
+              <li>20.30 – 06.00 Check in dan istirahat</li>
+            </ul>
+          </div>
+
+          <!-- Day 2 -->
+          <div class="day">
+            <h5>Hari Kedua</h5>
+            <ul>
+              <li>06.00 – 08.00 Sarapan & persiapan tour</li>
+              <li>Pergi ke tempat wisata</li>
+              <li>08.00 – 17.00 Gili Trawangan, makan siang, Bukit Malimbu</li>
+              <li>Free activity di Gili Trawangan (cidomo, sepeda, snorkling opsional)</li>
+              <li>17.00 – 20.00 Menuju Kota Mataram</li>
+              <li>Makan malam</li>
+              <li>20.00 – 06.00 Menuju hotel & istirahat</li>
+            </ul>
+          </div>
+
+          <!-- Day 3 -->
+          <div class="day">
+            <h5>Hari Ketiga</h5>
+            <ul>
+              <li>06.00 – 08.00 Sarapan & persiapan tour</li>
+              <li>Air Terjun Sendang Gile</li>
+              <li>Air Terjun Tiu Kelep</li>
+              <li>08.00 – 18.00 Masjid Kuno Bayan (opsional)</li>
+              <li>Belanja oleh-oleh</li>
+              <li>Makan malam</li>
+              <li>19.00 – 06.00 Kembali ke hotel & istirahat</li>
+            </ul>
+          </div>
+
+          <!-- Day 4 -->
+          <div class="day">
+            <h5>Hari Keempat</h5>
+            <ul>
+              <li>06.00 – 08.00 Sarapan & persiapan tour</li>
+              <li>08.00 – 17.00 Gili Nanggu, Gili Sudak, makan siang, Gili Kedis (Opsi 1)</li>
+              <li>Atau Pulau Pasir, Pantai Pink, makan siang, Gili Petelu (Opsi 2)</li>
+              <li>17.00 – 19.00 Makan malam</li>
+              <li>19.00 – 06.00 Kembali ke hotel & istirahat</li>
+            </ul>
+          </div>
+
+          <!-- Day 5 -->
+          <div class="day">
+            <h5>Hari Kelima</h5>
+            <ul>
+              <li>06.00 – 09.00 Sarapan dan check out</li>
+              <li>City Tour & Belanja Oleh-oleh</li>
+              <li>Islamic Centre</li>
+              <li>Pura Lingsar</li>
+              <li>09.00 – 15.00 Makan siang</li>
+              <li>Menuju Bandara Lombok</li>
+              <li>Program Trip Selesai</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  `
+            }};
+
+        // Attach click handlers
+        document.querySelectorAll('.tap button').forEach(button => {
+            button.addEventListener('click', function() {
+                const info = this.closest('.tour-card').querySelector('.info h3');
+                const packageName = info ? info.textContent.trim() : '';
+                const data = packageDetails[packageName];
+
+                if (data) {
+                    popupTitleEl.textContent = data.title;
+                    popupDetailEl.innerHTML = data.html;
+                } else {
+                    popupTitleEl.textContent = packageName || 'Package Detail';
+                    popupDetailEl.textContent = 'Detail tidak tersedia untuk paket ini.';
+                }
+
+                // add small whatsapp button into popup
+                const waText = encodeURIComponent('Halo Serompoen Tour, saya ingin memesan paket: ' + (data && data.title ? data.title : packageName));
+                const waBtn = document.createElement('a');
+                waBtn.className = 'popup-wa-btn';
+                waBtn.href = 'https://wa.me/6281258866798?text=' + waText;
+                waBtn.target = '_blank';
+                waBtn.rel = 'noopener noreferrer';
+                waBtn.innerHTML = '<i class="fa-brands fa-whatsapp"></i> Chat';
+                popupDetailEl.appendChild(waBtn);
+
+                initItineraryToggles();
+                popup.classList.add('show');
+            });
+        });
+
+        // initialize itinerary toggle function
+        function initItineraryToggles() {
+            // find all toggles inside popup
+            const toggles = popupDetailEl.querySelectorAll('.itinerary-toggle');
+            toggles.forEach(t => {
+                // ensure closed initial state
+                const parent = t.closest('.itinerary');
+                if (!parent) return;
+                parent.classList.remove('open');
+                t.setAttribute('aria-expanded', 'false');
+
+                // remove previous handlers to avoid duplicates
+                t.replaceWith(t.cloneNode(true));
+            });
+
+            // re-query after cloning
+            popupDetailEl.querySelectorAll('.itinerary-toggle').forEach(t => {
+                t.addEventListener('click', () => {
+                    const parent = t.closest('.itinerary');
+                    const body = parent.querySelector('.itinerary-body');
+                    const isOpen = parent.classList.toggle('open');
+                    t.setAttribute('aria-expanded', String(isOpen));
+                    if (isOpen) {
+                        // set max-height to scrollHeight for smooth slide
+                        body.style.maxHeight = body.scrollHeight + 'px';
+                    } else {
+                        body.style.maxHeight = '0px';
+                    }
+                });
+            });
+
+            // set initial max-height 0 for all bodies
+            popupDetailEl.querySelectorAll('.itinerary-body').forEach(b => {
+                b.style.maxHeight = '0px';
+            });
+        }
+
+        // close handlers
+        closePopup.addEventListener('click', function() {
+            popup.classList.remove('show');
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target === popup) {
+                popup.classList.remove('show');
+            }
+        });
+    </script>
+
+    <!-- Floating WhatsApp button -->
+    <a class="wa-fab" href="https://wa.me/6281258866798?text=Halo%20Serompoen%20Tour%2C%20saya%20ingin%20informasi%20(Lombok%20Packages)" target="_blank" rel="noopener noreferrer" aria-label="Chat via WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</body>
+</html>
