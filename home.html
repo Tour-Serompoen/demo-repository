@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="main css/home.css">
+	<link rel="stylesheet" href="template/navbar.css">
+	<link rel="stylesheet" href="template/footer.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<title>Serompoen Group</title>
+</head>
+<body>
+	<!-- navbar (standard root navbar) -->
+	<nav>
+		<div class="nav-logo">
+			<img src="/img/LogoKecil_Serompoen Groub.png" alt="logo">
+		</div>
+		<div class="navigation">
+			<ul class="nav-links">
+				<li><a href="/home.html" class="n1">Home</a></li>
+				<li><a href="/home.html#why" class="n1">About us</a></li>
+				<li class="dropdown">
+					<a class="n1">Paket Tour Favorit</a>
+					<ul class="dropdown-menu">
+						<li class="sub-dropdown">
+							<a href="/balipackages.html" class="sub-btn">Paket Tour Bali</a>
+							<ul class="sub-menu">
+								<li><a href="/balipackage.html">Paket 3 Hari 2 Malam</a></li>
+								<li><a href="/balipackage2.html">Paket 4 Hari 3 Malam</a></li>
+								<li><a href="/balipackage3.html">Paket 5 Hari 4 Malam</a></li>
+								<li><a href="/balipackage4.html">Paket 6 Hari 5 Malam</a></li>
+							</ul>
+						</li>
+						<li class="sub-dropdown"><a href="/packages/jogja.html" class="sub-btn">Paket Tour Jogja</a></li>
+						<li class="sub-dropdown"><a href="/packages/lombok.html" class="sub-btn">Paket Tour Lombok</a></li>
+						<li class="sub-dropdown"><a href="/packages/malang_batu.html" class="sub-btn">Paket Tour Malang Batu</a></li>
+                        <li><a href="/packages/malang_batu_bromo.html">Paket Malang, Batu & Bromo</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="https://wa.me/6281258866798" target="_blank" rel="noopener noreferrer" class="n1">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- top -->
+	<div id="top" class="top">
+		<div id="home" class="home">
+			<h1 class="cursive-bold">Serompoen<br>Tour & Travel</h1>
+		</div>
+
+		<!-- data / search form -->
+		<form id="searchForm" class="search-container" method="GET">
+			<!-- column 1 -->
+			<div class="search-column">
+				<label class="search-label">Pilihan Kategori</label>
+				<select name="kategori" id="kategori" class="search-select">
+					<option value="semua">Semua Kategori</option>
+					<option value="3H2M">Paket Tour 3 Hari 2 Malam</option>
+					<option value="4H3M">Paket Tour 4 Hari 3 Malam</option>
+					<option value="5H4M">Paket Tour 5 Hari 4 Malam</option>
+					<option value="6H5M">Paket Tour 6 Hari 5 Malam</option>
+				</select>
+			</div>
+
+			<!-- column 2 -->
+			<div class="search-column">
+				<label class="search-label">Pilihan Destinasi</label>
+				<select name="destinasi" id="destinasi" class="search-select">
+					<option value="semua">Semua Destinasi</option>
+					<option value="bali">Bali</option>
+					<option value="jogja">Jogja</option>
+					<option value="lombok">Lombok</option>
+					<option value="malang">Malang Batu</option>
+					<option value="bromo">Malang Batu & Bromo</option>
+				</select>
+			</div>
+
+			<!-- column 3 -->
+			<div class="search-column">
+				<label class="search-label">Durasi</label>
+				<select name="durasi" id="durasi" class="search-select">
+					<option value="semua">Semua Durasi</option>
+					<option value="3">3 Hari</option>
+					<option value="4">4 Hari</option>
+					<option value="5">5 Hari</option>
+					<option value="6">6 Hari</option>
+				</select>
+			</div>
+
+			<div class="search-column">
+				<button type="submit" class="search-button">
+					<i class="fa-solid fa-magnifying-glass"></i>
+					<span>Cari Paket</span>
+				</button>
+			</div>
+		</form>
+	</div>
+	<!-- end top -->
+<p style="color: white; font-size: 0.7rem; font-style: italic;" >Lisensi: Pexels License</p>
+	<!-- white bg -->
+	<div class="white">
+		<!-- why -->
+		<div id="why" class="why">
+			<div class="why-title">
+				<h1>Kenapa kami adalah yang terbaik?</h1>
+				<p>Serompoen Tour & Travel menawarkan pengalaman liburan yang tak terlupakan dengan paket wisata terlengkap, harga terbaik, dan pelayanan profesional. Kami siap mengurus semua kebutuhan perjalanan Anda!</p>
+			</div>
+		</div>
+		<!-- end why -->
+
+		<!-- package: replaced carousel with 3 simple cards -->
+		<div id="paket" class="package">
+			<h1>Top paket</h1>
+
+			<div class="top-packages" style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-top:30px;">
+				<a href="balipackage.html" style="width:320px;background:#fff;border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 8px 25px rgba(0,0,0,0.12);">
+					<div style="height:200px;background-image:url('img/Data/BALI/pexels-valeriiamiller-2587004.jpg');background-size:cover;background-position:center;"></div>
+					            	<p style="color: rgb(0, 9, 17); font-size: 10px;">Lisensi: Pexels License</p>
+					<div style="padding:16px 18px;">
+						<h3 style="margin:0 0 8px;color:#1f7b2a;font-size:18px;">Paket Bali — 3 Hari 2 Malam</h3>
+						<p style="margin:0 0 12px;color:#444;font-size:14px;">Mulai dari <b>Rp 2.205.000</b> / pax</p>
+						<span style="display:inline-block;padding:8px 12px;background:#157926;color:#fff;border-radius:8px;font-weight:700;">Lihat Detail</span>
+					</div>
+				</a>
+
+				<a href="balipackage2.html" style="width:320px;background:#fff;border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 8px 25px rgba(0,0,0,0.12);">
+					<div style="height:200px;background-image:url('img/Data/BALI/pexels-pixabay-413958.jpg');background-size:cover;background-position:center;"></div>
+					<p style="color: rgb(0, 9, 17); font-size: 10px;">Lisensi: Pexels License</p>
+					<div style="padding:16px 18px;">
+						<h3 style="margin:0 0 8px;color:#1f7b2a;font-size:18px;">Paket Bali — 4 Hari 3 Malam</h3>
+						<p style="margin:0 0 12px;color:#444;font-size:14px;">Mulai dari <b>Rp 2.350.000</b> / pax</p>
+						<span style="display:inline-block;padding:8px 12px;background:#157926;color:#fff;border-radius:8px;font-weight:700;">Lihat Detail</span>
+					</div>
+				</a>
+
+				<a href="packages/jogja.html" style="width:320px;background:#fff;border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 8px 25px rgba(0,0,0,0.12);">
+					<div style="height:200px;background-image:url('img/Data/JOGJA/pexels-dwi-rizqi-f-2155071311-35127236.jpg');background-size:cover;background-position:center;"></div>
+					            	<p style="color: rgb(0, 9, 17); font-size: 10px;">Lisensi: Pexels License</p>
+					<div style="padding:16px 18px;">
+						<h3 style="margin:0 0 8px;color:#1f7b2a;font-size:18px;">Paket Jogja — 3 Hari 2 Malam</h3>
+						<p style="margin:0 0 12px;color:#444;font-size:14px;">Mulai dari <b>Rp 1.175.000</b> / pax</p>
+						<span style="display:inline-block;padding:8px 12px;background:#157926;color:#fff;border-radius:8px;font-weight:700;">Lihat Detail</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- end white bg -->
+
+	<!-- footer -->
+	<footer id="footer" class="footer">
+		<div class="quote"><h2 class="cedarville-cursive-regular">Liburan Asik, Anti Ribet, Serompoen yang Urus!</h2></div>
+		<div class="footer-row">
+			<div class="footer-columm">
+				<h3>Visit our profile</h3>
+				<ul>
+					<li><i class="fa-brands fa-square-instagram"></i> @serompoen.tour</li>
+					<li><i class="fa-brands fa-tiktok"></i> @serompoen.tour</li>
+				</ul>
+			</div>
+			<div class="footer-columm">
+				<ul>
+					<li><a><i class="fa-solid fa-location-dot"></i> Lokasi umkm</a></li>
+					<li><i class="fa-brands fa-whatsapp"></i> +62 8125-8866-798</li>
+					<li><i class="fa-solid fa-envelope"></i> serompoen@gmail.com</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<!-- footer -->
+
+	<!-- Floating WhatsApp button -->
+	<a class="wa-fab" href="https://wa.me/6281258866798?text=Halo%20Serompoen%20Tour%2C%20saya%20ingin%20informasi%20paket%20(halaman%20Home)" target="_blank" rel="noopener noreferrer" aria-label="Chat via WhatsApp">
+		<i class="fa-brands fa-whatsapp"></i>
+	</a>
+
+	<script src="script.js" defer></script>
+	<script>
+		// search redirect (existing)
+		document.getElementById('searchForm').addEventListener('submit', function(e) {
+			e.preventDefault();
+			const kategori = document.getElementById('kategori').value;
+			const destinasi = document.getElementById('destinasi').value;
+			const durasi = document.getElementById('durasi').value;
+			const url = `allpackages.html?kategori=${kategori}&destinasi=${destinasi}&durasi=${durasi}`;
+			window.location.href = url;
+		});
+	</script>
+</body>
+</html>
