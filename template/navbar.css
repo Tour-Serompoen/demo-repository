@@ -1,0 +1,238 @@
+/* navbar */
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    z-index: 1000;
+    gap: 11rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background: rgba(31, 61, 40, 0.744); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);  */
+}
+
+.nav-logo img{
+    width: 150px;
+}
+
+.navigation .nav-links{
+    list-style: none;
+    display: flex;
+    /* the center stuff */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* the rest */
+    margin-left: 2.5rem;
+    gap: 50px;
+    align-items: center;
+    text-align: center;
+    padding: 20px 50px;
+    justify-content: space-evenly;
+    border: solid 3px #1f3d28;
+    border-radius: 50px;
+    background-color: #1f3d28;
+}
+
+.navigation .nav-links li .n1{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+}
+
+.navigation .nav-links li .n1::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scale(0);
+    height: 2px;
+    border-radius: 50px;
+    bottom: -2.5px;
+    left: 0;
+    background-color: #0dc566;
+    transition: all 0.3s ease-out;
+}
+
+.navigation .nav-links li .n1:hover{
+    cursor: pointer;
+    font-style: bold;
+    color: #0dc566;
+}
+
+.navigation .nav-links li .n1:hover::after{
+    transform: scale(1);
+    transform-origin: bottom-left;
+}
+
+/* DROPDOWN UTAMA */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(50,50,50,0.95);
+    padding: 10px 0;
+    min-width: 280px;
+    display: none;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+    display: flex;
+}
+
+.dropdown-menu li {
+    position: relative;
+    list-style: none;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* SUB MENU (LEVEL 2) */
+.sub-dropdown .sub-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-top: -3.3rem;
+    background: rgba(50,50,50,0.95);
+    min-width: 230px;
+    padding: 10px 0;
+    display: none;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+/* Tampilkan submenu saat hover item-nya */
+.sub-dropdown:hover .sub-menu,
+.sub-menu:hover {
+    display: flex;
+}
+
+/* Hover efek */
+.dropdown-menu li a:hover,
+.sub-menu li a:hover {
+    background: rgba(255,255,255,0.15);
+    cursor: pointer;
+}
+/* end navbar */
+
+/* ============================================ */
+/*     MOBILE RESPONSIVE                       */
+/* ============================================ */
+
+@media (max-width: 1024px) {
+    nav {
+        gap: 5rem;
+        padding: 15px 10px;
+    }
+
+    .nav-logo img {
+        width: 120px;
+    }
+
+    .navigation .nav-links {
+        gap: 30px;
+        padding: 15px 30px;
+        margin-left: 1rem;
+    }
+
+    .navigation .nav-links li .n1 {
+        font-size: 14px;
+    }
+
+    .dropdown-menu {
+        min-width: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .nav-logo img {
+        width: 100px;
+    }
+
+    .navigation .nav-links {
+        gap: 15px;
+        padding: 10px 15px;
+        margin-left: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        border: 2px solid #1f3d28;
+    }
+
+    .navigation .nav-links li .n1 {
+        font-size: 12px;
+    }
+
+    .dropdown-menu {
+        min-width: 200px;
+        top: 85%;
+    }
+
+    .sub-dropdown .sub-menu {
+        margin-top: -2.8rem;
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .nav-logo img {
+        width: 90px;
+    }
+
+    .navigation .nav-links {
+        gap: 10px;
+        padding: 8px 10px;
+        border-radius: 30px;
+        border: 2px solid #1f3d28;
+    }
+
+    .navigation .nav-links li {
+        list-style: none;
+    }
+
+    .navigation .nav-links li .n1 {
+        font-size: 11px;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 180px;
+    }
+
+    .sub-dropdown .sub-menu {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        margin-top: -2.3rem;
+        min-width: 180px;
+    }
+}
