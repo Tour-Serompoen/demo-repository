@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main css/package.css">
+    <link rel="stylesheet" href="./template/navbar.css">
+    <link rel="stylesheet" href="./template/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet"> <!-- cursive -->
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet"> <!-- Holtwood -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Paket</title>
+    <style>
+        /* kept minimal — popup styles moved to main css/package.css */
+    </style>
+</head>
+<body>
+    <!-- navbar -->
+<nav>
+		<div class="nav-logo">
+			<img src="/img/LogoKecil_Serompoen Groub.png" alt="logo">
+		</div>
+		<div class="navigation">
+			<ul class="nav-links">
+				<li><a href="/home.html" class="n1">Home</a></li>
+				<li><a href="/home.html#why" class="n1">About us</a></li>
+				<li class="dropdown">
+					<a class="n1">Paket Tour Favorit</a>
+					<ul class="dropdown-menu">
+						<li class="sub-dropdown">
+							<a href="/balipackages.html" class="sub-btn">Paket Tour Bali</a>
+							<ul class="sub-menu">
+								<li><a href="/balipackage.html">Paket 3 Hari 2 Malam</a></li>
+								<li><a href="/balipackage2.html">Paket 4 Hari 3 Malam</a></li>
+								<li><a href="/balipackage3.html">Paket 5 Hari 4 Malam</a></li>
+								<li><a href="/balipackage4.html">Paket 6 Hari 5 Malam</a></li>
+							</ul>
+						</li>
+						<li class="sub-dropdown"><a href="/packages/jogja.html" class="sub-btn">Paket Tour Jogja</a></li>
+						<li class="sub-dropdown"><a href="/packages/lombok.html" class="sub-btn">Paket Tour Lombok</a></li>
+						<li class="sub-dropdown"><a href="/packages/malang_batu.html" class="sub-btn">Paket Tour Malang Batu</a></li>
+                        <li><a href="/packages/malang_batu_bromo.html">Paket Malang, Batu & Bromo</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="https://wa.me/6281258866798" target="_blank" rel="noopener noreferrer" class="n1">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
+    <!-- end navbar -->
+
+    <!-- packages -->
+    <div class="tour-section">
+    <h2 class="title oleo-script-regular">Paket Tour Terbaru Bali Top Holiday</h2>
+    <div class="tour-grid">       
+    </div>
+    <div class="tngh">
+        <div class="tour-card" >
+            <div class="label">
+                <span class="promo">Packages For 6 Days 5 Nights</span>
+                <span class="code">PACKAGE 1</span>
+            </div>
+           <img src="img/Data/BALI/pexels-apasaric-2707756.jpg" class="tour-img">
+            <p style="color: rgb(0, 9, 17); font-size: 10px;">Lisensi: Pexels License</p>
+
+            <div class="info">
+                <h3>BALI 1</h3>
+                <p class="price"><small>*Mulai</small> <b>Rp 1.500.000</b> / pax</p>
+            </div>
+            <div class="tap"><button><h3>Tap Here</h3></button></div>
+        </div>
+        </div>
+</div>
+
+    <!-- end packages -->
+     <div class="sor">
+      <p style="color: white; font-size: 0.7rem; font-style: italic;" >source: https://gpriority.co.id/wp-content/uploads/</p>
+     </div>
+<p style="color: aliceblue;">Copyright: Copyright 2014, Didi Lotze, Bremen</p>
+    <!-- footer -->
+    <footer id="footer" class="footer">
+        <div class="quote"><h2 class="cedarville-cursive-regular">Liburan Asik, Anti Ribet, Serompoen yang Urus!</h2></div>
+        <div class="footer-row">
+            <div class="footer-columm">
+                <h3>Visit our profile</h3>
+                <ul>
+                    <li><i class="fa-brands fa-square-instagram"></i> @serompoen.tour</li>
+                    <li><i class="fa-brands fa-tiktok"></i> @serompoen.tour</li>
+                </ul>
+            </div>
+            <div class="footer-columm">
+                <ul>
+                    <li><a><i class="fa-solid fa-location-dot"></i> Lokasi umkm</a></li>
+                    <li><i class="fa-solid fa-phone"></i> 0000 0000</li>
+                    <li><i class="fa-brands fa-whatsapp"></i> +62 8125-8866-798</li>
+                    <li><i class="fa-solid fa-envelope"></i> serompoen@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            <h3 id="popupTitle"></h3>
+            <p id="popupDetail"></p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for popup functionality (updated to provide full HTML for each package)
+        const popup = document.getElementById('popup');
+        const closePopup = document.getElementById('closePopup');
+        const popupTitleEl = document.getElementById('popupTitle');
+        const popupDetailEl = document.getElementById('popupDetail');
+
+        // Data: HTML content for each package (BALI 1 implemented)
+        const packageDetails = {
+            "BALI 1": {
+                title: "BALI 1 — 6 Days / 5 Nights",
+                html: `
+                <div class="popup-inner">
+                  <div class="price-and-include">
+                    <div class="price-list">
+                      <h4>PRICE LIST</h4>
+                      <table class="price-table">
+                        <thead>
+                          <tr>
+                            <th>Hotel</th>
+                            <th>Grand Zuri</th>
+                            <th>The One Legian</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr><td>2 Pax / Org</td><td>Rp3.905.000</td><td>Rp3.805.000</td></tr>
+                          <tr><td>4 Pax / Org</td><td>Rp3.750.000</td><td>Rp3.650.000</td></tr>
+                          <tr><td>6 Pax / Org</td><td>Rp3.615.000</td><td>Rp3.515.000</td></tr>
+                          <tr><td>8 Pax / Org</td><td>Rp3.550.000</td><td>Rp3.450.000</td></tr>
+                          <tr><td>10 Pax / Org</td><td>Rp3.405.000</td><td>Rp3.305.000</td></tr>
+                          <tr><td>20 Pax / Org</td><td>Rp3.320.000</td><td>Rp3.215.000</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="inclusions">
+                      <h4>Inclusion</h4>
+                      <ul>
+                        <li>Hotel bintang 3/4 + Sarapan (sesuai pilihan).</li>
+                        <li>Transportasi mobil/minibus/bus + Supir + BBM + Parkir/Tol.</li>
+                        <li>Penjemputan & pengantaran ke bandara.</li>
+                        <li>Tour sesuai itinerary.</li>
+                        <li>1 botol air mineral setiap hari.</li>
+                        <li>Tiket masuk objek wisata sesuai itinerary.</li>
+                      </ul>
+
+                      <h4>Exclude</h4>
+                      <ul>
+                        <li>Tiket pesawat (dapat dibantu booking).</li>
+                        <li>Obat-obatan dan asuransi perjalanan.</li>
+                        <li>Keperluan pribadi diluar "Inclusion".</li>
+                        <li>Tips untuk supir/guide.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="itinerary">
+                    <button class="itinerary-toggle" aria-expanded="false">ITINERARY</button>
+                    <div class="itinerary-body">
+                      <h4>ITINERARY</h4>
+                      <div class="itinerary-grid">
+                        <div class="day">
+                          <h5>Day 1</h5>
+                          <ul>
+                            <li>Arrival — Jemputan di Bandara Ngurah Rai</li>
+                            <li>Transfer & Check-in hotel</li>
+                            <li>Santai / Free time di Kuta atau Jimbaran</li>
+                            <li>Makan malam di Jimbaran (opsional)</li>
+                          </ul>
+                        </div>
+
+                        <div class="day">
+                          <h5>Day 2</h5>
+                          <ul>
+                            <li>Bedugul — Pura Ulun Danu Beratan</li>
+                            <li>Kebun Raya Bedugul / The Blooms Garden</li>
+                            <li>Makan siang di Bedugul</li>
+                            <li>Pura Tanah Lot (sunset jika memungkinkan)</li>
+                            <li>Kembali ke hotel</li>
+                          </ul>
+                        </div>
+
+                        <div class="day">
+                          <h5>Day 3</h5>
+                          <ul>
+                            <li>Desa Panglipuran (desa tradisional)</li>
+                            <li>Kintamani — Penelokan & Danau Batur</li>
+                            <li>Makan siang dengan pemandangan Kintamani</li>
+                            <li>Tirta Empul / Oka Agrowisata Luwak (opsional)</li>
+                            <li>Kembali ke hotel</li>
+                          </ul>
+                        </div>
+
+                        <div class="day">
+                          <h5>Day 4</h5>
+                          <ul>
+                            <li>Tanjung Benoa — water sport (opsional)</li>
+                            <li>Pantai Pandawa atau Pantai Melasti</li>
+                            <li>Makan siang area Uluwatu</li>
+                            <li>Pura Uluwatu — sunset & Kecak (opsional malam)</li>
+                            <li>Kembali ke hotel</li>
+                          </ul>
+                        </div>
+
+                        <div class="day">
+                          <h5>Day 5</h5>
+                          <ul>
+                            <li>Ubud — Monkey Forest & Ubud Palace</li>
+                            <li>Pasar Seni Ubud / Pusat Oleh-Oleh</li>
+                            <li>Makan siang di Ubud</li>
+                            <li>Sore: spa / aktivitas bebas</li>
+                          </ul>
+                        </div>
+
+                        <div class="day">
+                          <h5>Day 6</h5>
+                          <ul>
+                            <li>Check-out dari hotel</li>
+                            <li>Singgah pusat oleh-oleh jika waktu memungkinkan</li>
+                            <li>Transfer ke Bandara Ngurah Rai — Selesai</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>`
+            },
+            "BALI 2": {
+                title: "BALI 2 — 3 Days / 2 Nights",
+                html: `
+                <div class="popup-inner">
+                  <div class="price-and-include">
+                    <div class="price-list">
+                      <h4>PRICE LIST</h4>
+                      <table class="price-table">
+                        <thead>
+                          <tr>
+                            <th>Hotel</th>
+                            <th>Grand Zuri Kuta</th>
+                            <th>The One Legian</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr><td>2 Pax/Org</td><td>Rp2.350.000</td><td>Rp2.275.000</td></tr>
+                          <tr><td>4 Pax/Org</td><td>Rp2.300.000</td><td>Rp2.250.000</td></tr>
+                          <tr><td>6 Pax/Org</td><td>Rp2.240.000</td><td>Rp2.200.000</td></tr>
+                          <tr><td>8 Pax/Org</td><td>Rp2.100.000</td><td>Rp2.050.000</td></tr>
+                          <tr><td>10 Pax/Org</td><td>Rp1.975.000</td><td>Rp1.975.000</td></tr>
+                          <tr><td>20 Pax/Org</td><td>Rp1.890.000</td><td>Rp1.890.000</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="inclusions">
+                      <h4>include</h4>
+                      <ul>
+                        <li>Hotel bintang 3/4 + Sarapan (Sesuai pilihan).</li>
+                        <li>Transportasi mobil/minibus/bus + Supir + BBM + Parkir/Tol.</li>
+                        <li>Penjemputan & pengantaran ke bandara.</li>
+                        <li>Tour sesuai itinerary.</li>
+                        <li>1 Botol air mineral setiap hari.</li>
+                        <li>Tiket masuk wisata.</li>
+                      </ul>
+
+                      <h4>Exclude</h4>
+                      <ul>
+                        <li>Tiket pesawat (Dapat dibantu booking).</li>
+                        <li>Obat-obatan.</li>
+                        <li>Keperluan pribadi diluar "Inclusion".</li>
+                        <li>Tips untuk supir/guide.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="itinerary">
+                    <button class="itinerary-toggle" aria-expanded="false">ITINERARY</button>
+                    <div class="itinerary-body">
+                      <h4>ITINERARY</h4>
+                      <div class="itinerary-grid">
+                        <div class="day">
+                          <h5>Day 1</h5>
+                          <ul>
+                            <li>Jemputan di Bandara Bali</li>
+                            <li>CheckIn</li>
+                            <li>Discovery</li>
+                            <li>Makan Malam</li>
+                            <li>Kembali Ke hotel</li>
+                          </ul>
+                        </div>
+                        <div class="day">
+                          <h5>Day 2</h5>
+                          <ul>
+                            <li>Tanjung Benoa (water sport optional)</li>
+                            <li>Makan Siang</li>
+                            <li>Tebing Tanah Lot / Tebing Tanah Barak</li>
+                            <li>Pantai Pandawa</li>
+                            <li>Makan Malam di Denpasar</li>
+                            <li>Kembali ke Hotel</li>
+                          </ul>
+                        </div>
+                        <div class="day">
+                          <h5>Day 3</h5>
+                          <ul>
+                            <li>Checkout</li>
+                            <li>Pusat Oleh-Oleh</li>
+                            <li>Makan Siang at Kuta</li>
+                            <li>Transfer ke Bandara / Selesai</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>`
+            },
+            "BALI 3": {
+                title: "BALI 3 — 3 Days / 2 Nights",
+                html: `
+                <div class="popup-inner">
+                  <div class="price-and-include">
+                    <div class="price-list">
+                      <h4>PRICE LIST</h4>
+                      <table class="price-table">
+                        <thead>
+                          <tr>
+                            <th>Hotel</th>
+                            <th>The One Legian</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr><td>4 Pax/Org</td><td>Rp1.500.000</td></tr>
+                          <tr><td>5 Pax/Org</td><td>Rp1.350.000</td></tr>
+                        </tbody>
+                      </table>
+                      <p style="color:#c33;margin-top:8px;font-size:13px;">*minimal 4 orang</p>
+                    </div>
+
+                    <div class="inclusions">
+                      <h4>include</h4>
+                      <ul>
+                        <li>Hotel bintang 3/4 + Sarapan (Sesuai pilihan).</li>
+                        <li>Transportasi mobil/minibus/bus + Supir + BBM + Parkir/Tol.</li>
+                        <li>Penjemputan & pengantaran ke bandara.</li>
+                        <li>Tour sesuai itinerary.</li>
+                        <li>1 Botol air mineral setiap hari.</li>
+                        <li>Tiket masuk wisata.</li>
+                      </ul>
+
+                      <h4>Exclude</h4>
+                      <ul>
+                        <li>Tiket pesawat (Dapat dibantu booking).</li>
+                        <li>Obat-obatan.</li>
+                        <li>Keperluan pribadi diluar "Inclusion".</li>
+                        <li>Tips untuk supir/guide.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="itinerary">
+                    <button class="itinerary-toggle" aria-expanded="false">ITINERARY</button>
+                    <div class="itinerary-body">
+                      <h4>ITINERARY</h4>
+                      <div class="itinerary-grid">
+                        <div class="day">
+                          <h5>Day 1</h5>
+                          <ul>
+                            <li>Jemputan di Bandara Bali</li>
+                            <li>CheckIn</li>
+                            <li>Discovery</li>
+                            <li>Makan Malam</li>
+                            <li>Kembali Ke hotel</li>
+                          </ul>
+                        </div>
+
+                        <div class="day">
+                          <h5>Day 2 (Opsi 1)</h5>
+                          <ul>
+                            <li>Desa Panglipuran</li>
+                            <li>Kintamani Penelokan</li>
+                            <li>Oka Agrowisata Luwak</li>
+                            <li>Pura Tirta Empul</li>
+                          </ul>
+                        </div>
+
+                        <div class="day">
+                          <h5>Day 2 (Opsi 2)</h5>
+                          <ul>
+                            <li>Tanjung Benoa (Bayar Sendiri / Water-sport)</li>
+                            <li>Pantai Pandawa</li>
+                            <li>Pantai Melasti</li>
+                            <li>Pura Uluwatu</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>`
+            }
+        };
+
+        // Attach click handlers
+        document.querySelectorAll('.tap button').forEach(button => {
+            button.addEventListener('click', function() {
+                const info = this.closest('.tour-card').querySelector('.info h3');
+                const packageName = info ? info.textContent.trim() : '';
+                const data = packageDetails[packageName];
+
+                if (data) {
+                    popupTitleEl.textContent = data.title;
+                    popupDetailEl.innerHTML = data.html;
+                } else {
+                    popupTitleEl.textContent = packageName || 'Package Detail';
+                    popupDetailEl.textContent = 'Detail tidak tersedia untuk paket ini.';
+                }
+
+                // add small whatsapp button into popup
+                const waText = encodeURIComponent('Halo Serompoen Tour, saya ingin memesan paket: ' + (data && data.title ? data.title : packageName));
+                const waBtn = document.createElement('a');
+                waBtn.className = 'popup-wa-btn';
+                waBtn.href = 'https://wa.me/6281258866798?text=' + waText;
+                waBtn.target = '_blank';
+                waBtn.rel = 'noopener noreferrer';
+                waBtn.innerHTML = '<i class="fa-brands fa-whatsapp"></i> Chat';
+                popupDetailEl.appendChild(waBtn);
+
+                initItineraryToggles();
+                popup.classList.add('show');
+            });
+        });
+
+        // initialize itinerary toggle function
+        function initItineraryToggles() {
+            // find all toggles inside popup
+            const toggles = popupDetailEl.querySelectorAll('.itinerary-toggle');
+            toggles.forEach(t => {
+                // ensure closed initial state
+                const parent = t.closest('.itinerary');
+                if (!parent) return;
+                parent.classList.remove('open');
+                t.setAttribute('aria-expanded', 'false');
+
+                // remove previous handlers to avoid duplicates
+                t.replaceWith(t.cloneNode(true));
+            });
+
+            // re-query after cloning
+            popupDetailEl.querySelectorAll('.itinerary-toggle').forEach(t => {
+                t.addEventListener('click', () => {
+                    const parent = t.closest('.itinerary');
+                    const body = parent.querySelector('.itinerary-body');
+                    const isOpen = parent.classList.toggle('open');
+                    t.setAttribute('aria-expanded', String(isOpen));
+                    if (isOpen) {
+                        // set max-height to scrollHeight for smooth slide
+                        body.style.maxHeight = body.scrollHeight + 'px';
+                    } else {
+                        body.style.maxHeight = '0px';
+                    }
+                });
+            });
+
+            // set initial max-height 0 for all bodies
+            popupDetailEl.querySelectorAll('.itinerary-body').forEach(b => {
+                b.style.maxHeight = '0px';
+            });
+        }
+
+        // close handlers
+        closePopup.addEventListener('click', function() {
+            popup.classList.remove('show');
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target === popup) {
+                popup.classList.remove('show');
+            }
+        });
+    </script>
+
+    <!-- Floating WhatsApp button -->
+    <a class="wa-fab" href="https://wa.me/6281258866798?text=Halo%20Serompoen%20Tour%2C%20saya%20ingin%20informasi%20(Bali%20Package%204)" target="_blank" rel="noopener noreferrer" aria-label="Chat via WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</body>
+</html>

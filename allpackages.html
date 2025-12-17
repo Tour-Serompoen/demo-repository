@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Packages</title>
+
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="main css/allpackages.css">
+    <link rel="stylesheet" href="template/navbar.css">
+    <link rel="stylesheet" href="template/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Fix spacing untuk navbar dan content */
+        body {
+            padding-top: 120px; /* Beri ruang untuk navbar fixed */
+        }
+        
+        .page-title {
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+        
+        .filter-result-box {
+            margin-top: 20px;
+        }
+        
+        .package-grid {
+            margin-top: 30px;
+            padding-top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+<!-- navbar -->
+<nav>
+		<div class="nav-logo">
+			<img src="/img/LogoKecil_Serompoen Groub.png" alt="logo">
+		</div>
+		<div class="navigation">
+			<ul class="nav-links">
+				<li><a href="/home.html" class="n1">Home</a></li>
+				<li><a href="/home.html#why" class="n1">About us</a></li>
+				<li class="dropdown">
+					<a class="n1">Paket Tour Favorit</a>
+					<ul class="dropdown-menu">
+						<li class="sub-dropdown">
+							<a href="/balipackages.html" class="sub-btn">Paket Tour Bali</a>
+							<ul class="sub-menu">
+								<li><a href="/balipackage.html">Paket 3 Hari 2 Malam</a></li>
+								<li><a href="/balipackage2.html">Paket 4 Hari 3 Malam</a></li>
+								<li><a href="/balipackage3.html">Paket 5 Hari 4 Malam</a></li>
+								<li><a href="/balipackage4.html">Paket 6 Hari 5 Malam</a></li>
+							</ul>
+						</li>
+						<li class="sub-dropdown"><a href="/packages/jogja.html" class="sub-btn">Paket Tour Jogja</a></li>
+						<li class="sub-dropdown"><a href="/packages/lombok.html" class="sub-btn">Paket Tour Lombok</a></li>
+						<li class="sub-dropdown"><a href="/packages/malang_batu.html" class="sub-btn">Paket Tour Malang Batu</a></li>
+                        <li><a href="/packages/malang_batu_bromo.html">Paket Malang, Batu & Bromo</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="https://wa.me/6281258866798" target="_blank" rel="noopener noreferrer" class="n1">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
+<!-- end navbar -->
+
+    <h1 class="page-title">Hasil Pencarian Paket</h1>
+
+    <div class="filter-result-box" id="filterResult">Menampilkan semua paket...</div>
+
+    <!-- GRID RESULT -->
+    <div class="package-grid" id="packageList"></div>
+
+    <!-- footer -->
+    <footer id="footer" class="footer">
+        <div class="quote"><h2 class="cedarville-cursive-regular">Liburan Asik, Anti Ribet, Serompoen yang Urus!</h2></div>
+        <div class="footer-row">
+            <div class="footer-columm">
+                <h3>Visit our profile</h3>
+                <ul>
+                    <li><i class="fa-brands fa-square-instagram"></i> @serompoen.tour</li>
+                    <li><i class="fa-brands fa-tiktok"></i> @serompoen.tour</li>
+                </ul>
+            </div>
+            <div class="footer-columm">
+                <ul>
+                    <li><a><i class="fa-solid fa-location-dot"></i> Lokasi umkm</a></li>
+                    <li><i class="fa-solid fa-phone"></i> 0000 0000</li>
+                    <li><i class="fa-brands fa-whatsapp"></i> +62 8125-8866-798</li>
+                    <li><i class="fa-solid fa-envelope"></i> serompoen@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <!-- Floating WhatsApp button -->
+    <a class="wa-fab" href="https://wa.me/6281258866798?text=Halo%20Serompoen%20Tour%2C%20saya%20ingin%20informasi%20(hasil%20pencarian%20paket)" target="_blank" rel="noopener noreferrer" aria-label="Chat via WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+<script>
+/* ======================================
+   DATA PAKET (LENGKAP SESUAI FILE LAIN)
+   ====================================== */
+const allPackages = [
+    // PAKET BALI 3 HARI 2 MALAM
+    {
+        id: 1,
+        nama: "Bali 1 - 3 Hari 2 Malam",
+        destinasi: "bali",
+        durasi: "3",
+        kategori: "3H2M",
+        harga: "Rp 2.205.000",
+        img: "img/Data/BALI/bali1.webp",
+        link: "balipackage.html"
+    },
+    {
+        id: 2,
+        nama: "Bali 2 - 3 Hari 2 Malam",
+        destinasi: "bali",
+        durasi: "3",
+        kategori: "3H2M",
+        harga: "Rp 2.350.000",
+        img: "img/Data/BALI/bali2.jpg",
+        link: "balipackage.html"
+    },
+    {
+        id: 3,
+        nama: "Bali 3 - 3 Hari 2 Malam",
+        destinasi: "bali",
+        durasi: "3",
+        kategori: "3H2M",
+        harga: "Rp 1.500.000",
+        img: "img/Data/BALI/bali3.jpeg",
+        link: "balipackage.html"
+    },
+    
+    // PAKET BALI 4 HARI 3 MALAM
+    {
+        id: 4,
+        nama: "Bali 1 - 4 Hari 3 Malam",
+        destinasi: "bali",
+        durasi: "4",
+        kategori: "4H3M",
+        harga: "Rp 2.860.000",
+        img: "img/Data/BALI/bali1.webp",
+        link: "balipackage2.html"
+    },
+    {
+        id: 5,
+        nama: "Bali 2 - 4 Hari 3 Malam",
+        destinasi: "bali",
+        durasi: "4",
+        kategori: "4H3M",
+        harga: "Rp 2.350.000",
+        img: "img/Data/BALI/bali2.jpg",
+        link: "balipackage2.html"
+    },
+    {
+        id: 6,
+        nama: "Bali 3 - 4 Hari 3 Malam",
+        destinasi: "bali",
+        durasi: "4",
+        kategori: "4H3M",
+        harga: "Rp 1.500.000",
+        img: "img/Data/BALI/bali3.jpeg",
+        link: "balipackage2.html"
+    },
+    {
+        id: 7,
+        nama: "Bali 4 - 4 Hari 3 Malam",
+        destinasi: "bali",
+        durasi: "4",
+        kategori: "4H3M",
+        harga: "Rp 3.255.000",
+        img: "img/Data/BALI/bali5.avif",
+        link: "balipackage2.html"
+    },
+    
+    // PAKET BALI 5 HARI 4 MALAM
+    {
+        id: 8,
+        nama: "Bali 1 - 5 Hari 4 Malam",
+        destinasi: "bali",
+        durasi: "5",
+        kategori: "5H4M",
+        harga: "Rp 3.945.000",
+        img: "img/Data/BALI/bali2.jpg",
+        link: "balipackage3.html"
+    },
+    
+    // PAKET BALI 6 HARI 5 MALAM
+    {
+        id: 9,
+        nama: "Bali 1 - 6 Hari 5 Malam",
+        destinasi: "bali",
+        durasi: "6",
+        kategori: "6H5M",
+        harga: "Rp 3.905.000",
+        img: "img/Data/BALI/bali3.jpeg",
+        link: "balipackage4.html"
+    },
+    
+    // PAKET JOGJA
+    {
+        id: 10,
+        nama: "Jogja 1 - 3 Hari 2 Malam",
+        destinasi: "jogja",
+        durasi: "3",
+        kategori: "3H2M",
+        harga: "Rp 1.175.000",
+        img: "img/Data/JOGJA/jogja1.jpg",
+        link: "packages/jogja.html"
+    },
+    {
+        id: 11,
+        nama: "Jogja 2 - 4 Hari 3 Malam",
+        destinasi: "jogja",
+        durasi: "4",
+        kategori: "4H3M",
+        harga: "Rp 1.500.000",
+        img: "img/Data/JOGJA/jogja3.jpg",
+        link: "packages/jogja.html"
+    },
+    {
+        id: 12,
+        nama: "Jogja 3 - 5 Hari 4 Malam",
+        destinasi: "jogja",
+        durasi: "5",
+        kategori: "5H4M",
+        harga: "Rp 1.950.000",
+        img: "img/Data/JOGJA/jogja4.jpg",
+        link: "packages/jogja.html"
+    },
+    
+    // PAKET LOMBOK
+    {
+        id: 13,
+        nama: "Lombok 1 - 5 Hari 4 Malam",
+        destinasi: "lombok",
+        durasi: "5",
+        kategori: "5H4M",
+        harga: "Rp 1.850.000",
+        img: "img/Data/LOMBOK/lombok1.jpg",
+        link: "packages/lombok.html"
+    },
+
+    // PAKET MALANG BATU 3 HARI 2 MALAM
+    {
+        id: 14,
+        nama: "Malang Batu 1 - 3 Hari 2 Malam",
+        destinasi: "malang",
+        durasi: "3",
+        kategori: "3H2M",
+        harga: "Rp 1.450.000",
+        img: "img/Data/MALANG/malang1.jpg",
+        link: "packages/malang_batu.html"
+    },
+
+    // PAKET MALANG BATU 4 HARI 3 MALAM
+    {
+        id: 15,
+        nama: "Malang Batu 2 - 4 Hari 3 Malam",
+        destinasi: "malang",
+        durasi: "4",
+        kategori: "4H3M",
+        harga: "Rp 1.875.000",
+        img: "img/Data/MALANG/malang2.jpg",
+        link: "packages/malang_batu.html"
+    },
+
+    // PAKET MALANG BATU 5 HARI 4 MALAM
+    {
+        id: 16,
+        nama: "Malang Batu 3 - 5 Hari 4 Malam",
+        destinasi: "malang",
+        durasi: "5",
+        kategori: "5H4M",
+        harga: "Rp 2.325.000",
+        img: "img/Data/MALANG/malang3.jpg",
+        link: "packages/malang_batu.html"
+    },
+
+    // PAKET MALANG BATU BROMO 3 HARI 2 MALAM
+    {
+        id: 17,
+        nama: "Malang Bromo 1 - 3 Hari 2 Malam",
+        destinasi: "bromo",
+        durasi: "3",
+        kategori: "3H2M",
+        harga: "Rp 1.650.000",
+        img: "img/Data/MALANG/malang1.jpg",
+        link: "packages/malang_batu_bromo.html"
+    },
+
+    // PAKET MALANG BATU BROMO 4 HARI 3 MALAM
+    {
+        id: 18,
+        nama: "Malang Bromo 2 - 4 Hari 3 Malam",
+        destinasi: "bromo",
+        durasi: "4",
+        kategori: "4H3M",
+        harga: "Rp 2.150.000",
+        img: "img/Data/MALANG/malang2.jpg",
+        link: "packages/malang_batu_bromo.html"
+    },
+
+    // PAKET MALANG BATU BROMO 5 HARI 4 MALAM
+    {
+        id: 19,
+        nama: "Malang Bromo 3 - 5 Hari 4 Malam",
+        destinasi: "bromo",
+        durasi: "5",
+        kategori: "5H4M",
+        harga: "Rp 2.750.000",
+        img: "img/Data/MALANG/malang3.jpg",
+        link: "packages/malang_batu_bromo.html"
+    }
+];
+
+/* =====================================================
+   TANGKAP FILTER YANG DIKIRIM DARI home.html VIA URL
+   ===================================================== */
+const urlParams = new URLSearchParams(window.location.search);
+
+let kategori = urlParams.get("kategori") || "semua";
+let destinasi = urlParams.get("destinasi") || "semua";
+let durasi = urlParams.get("durasi") || "semua";
+
+/* ======================================
+       FILTER DATA
+   ====================================== */
+function cocok(dataValue, filterValue) {
+    if (filterValue === "semua") return true;
+    return dataValue.toLowerCase() === filterValue.toLowerCase();
+}
+
+const filtered = allPackages.filter(pkg => {
+    const kategoriMatch = cocok(pkg.kategori, kategori);
+    const destinasiMatch = cocok(pkg.destinasi, destinasi);
+    const durasiMatch = cocok(pkg.durasi, durasi);
+    
+    return kategoriMatch && destinasiMatch && durasiMatch;
+});
+
+/* ======================================
+       UPDATE TEXT FILTER
+   ====================================== */
+const filterDisplay = {
+    kategori: kategori === "semua" ? "Semua Kategori" : kategori.toUpperCase(),
+    destinasi: destinasi === "semua" ? "Semua Destinasi" : destinasi.charAt(0).toUpperCase() + destinasi.slice(1),
+    durasi: durasi === "semua" ? "Semua Durasi" : durasi + " Hari"
+};
+
+document.getElementById("filterResult").innerHTML =
+    `Kategori: <b>${filterDisplay.kategori}</b> &nbsp;&nbsp; | &nbsp;&nbsp;
+     Destinasi: <b>${filterDisplay.destinasi}</b> &nbsp;&nbsp; | &nbsp;&nbsp;
+     Durasi: <b>${filterDisplay.durasi}</b>`;
+
+/* ======================================
+       RENDER PACKAGES
+   ====================================== */
+const container = document.getElementById("packageList");
+
+if (filtered.length === 0) {
+    container.innerHTML = `<p style="color:white; text-align:center; font-size:20px; grid-column: 1 / -1;">
+    Tidak ada paket sesuai pencarian 😔</p>`;
+} else {
+    filtered.forEach(pkg => {
+        container.innerHTML += `
+            <div class="package-card">
+                <img class="package-img" src="${pkg.img}" alt="${pkg.nama}">
+                <div class="package-info">
+                    <h3>${pkg.nama}</h3>
+                    <p><strong>Destinasi:</strong> ${pkg.destinasi.charAt(0).toUpperCase() + pkg.destinasi.slice(1)}</p>
+                    <p><strong>Durasi:</strong> ${pkg.durasi} Hari</p>
+                    <p><strong>Kategori:</strong> ${pkg.kategori}</p>
+                    <p class="price"><strong>Mulai dari:</strong> <b>${pkg.harga}</b> / pax</p>
+                    <a class="detail-btn" href="${pkg.link}">
+                        Lihat Detail
+                    </a>
+                </div>
+            </div>
+        `;
+    });
+}
+
+</script>
+
+</body>
+</html>
