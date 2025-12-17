@@ -1,0 +1,94 @@
+/* global */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+}
+
+.oleo-script-regular {
+  font-family: "Oleo Script", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.oleo-script-bold {
+  font-family: "Oleo Script", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.holtwood-one-sc-regular {
+  font-family: "Holtwood One SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+    background: linear-gradient(#00000057, #00000083), url(../img/Data/BALI/bali-By\ Firmanazra.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* ==================================================================== */
+
+#content {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 150px;
+    color: white;
+}
+
+#content h1 {
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.package-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+.package-card{
+    background-color: rgb(82, 139, 120);
+    width: 75vw;
+    padding: 2.5rem 0;
+}
+
+.package-card:hover{
+    box-shadow: 10px 10px #00000070;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transition: all 0.3s ease-out;
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 20px); }
+    100%   { transform: translate(0, -0px); }    
+}
+
+.package-card p{
+    color: white;
+    font-size: 18px;
+}
